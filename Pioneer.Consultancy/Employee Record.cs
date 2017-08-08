@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PioneerTech.Consultancy.DAL;
 
 namespace Pioneer.Consultancy
 {
@@ -31,28 +32,19 @@ namespace Pioneer.Consultancy
         private void companyDetailsSaveButton_Click(object sender, EventArgs e)
         {
             string employerName = employerNameTextBox.Text;
-            string contactNumber = contactNumberTextBox.Text;
+            long contactNumber = Convert.ToInt64(contactNumberTextBox.Text);
             string location = companyLocationTextBox.Text;
             string website = companyWebsiteTextBox.Text;
             int employeeID = Convert.ToInt32(companyEmployeeIDTextBox.Text);
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-I3T5H70;" +
-               "Initial Catalog=PioneerTech;" +
-               "Integrated Security=true");
-            try
+            EmployeeDataAccessLayer companyDAL = new EmployeeDataAccessLayer();
+            int numberOfRowEffected = companyDAL.SaveEmployeeCompanyData(employerName, contactNumber, location, website, employeeID);
+            if (numberOfRowEffected > 0)
             {
-                conn.Open();
-                SqlCommand command = new SqlCommand("INSERT INTO CompanyDetail VALUES(" +
-                           "'" + employerName + "'," + contactNumber + ",'" + location + "','" +
-                          website + "'," + employeeID + ")", conn);
-                SqlDataReader rr = command.ExecuteReader();
+                MessageBox.Show("Employee Company Data Successfully Added");
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show(exception.Message);
-            }
-            finally
-            {
-                conn.Close();
+                MessageBox.Show("Employee Company Data not Added. Please try again.");
             }
         }
 
@@ -69,26 +61,17 @@ namespace Pioneer.Consultancy
             string homeCountry = homeCountryTextBox.Text;
             string currentCountry = currentCountryTextBox.Text;
             int zipCode = Convert.ToInt32(zipcodeTextBox.Text);
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-I3T5H70;" +
-                "Initial Catalog=PioneerTech;" +
-                "Integrated Security=true");
-            try
+            EmployeeDataAccessLayer employeeDAL = new EmployeeDataAccessLayer();
+            int numberOfRowEffected = employeeDAL.SaveEmployeeData(firstName, lastName, emailId, phoneNumber, alternatePhoneNumber, address1, address2, homeCountry, currentCountry, zipCode);
+            if(numberOfRowEffected>0)
             {
-                conn.Open();
-                SqlCommand command = new SqlCommand("INSERT INTO EmployeeDetail VALUES(" +
-                           "'" + firstName + "','" + lastName + "','" + emailId + "'," +
-                           phoneNumber + "," + alternatePhoneNumber + ",'" + address1 + "','" + address2 +
-                           "','" + homeCountry + "','" + currentCountry + "'," + zipCode + ")", conn);
-                SqlDataReader rr = command.ExecuteReader();
+                MessageBox.Show("Employee Data Successfully Added");
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show("Employee Data not Added");
             }
-            finally
-            {
-                conn.Close();
-            }
+
         }
 
         private void projectDetailsSaveButton_Click(object sender, EventArgs e)
@@ -98,24 +81,15 @@ namespace Pioneer.Consultancy
             string roles = rolesTextBox.Text;
             string location = projectLocationTextBox.Text;
             int employeeID = Convert.ToInt32(employeeIdTextBox.Text);
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-I3T5H70;" +
-               "Initial Catalog=PioneerTech;" +
-               "Integrated Security=true");
-            try
+            EmployeeDataAccessLayer projectDAL = new EmployeeDataAccessLayer();
+            int numberOfRowEffected = projectDAL.SaveEmployeeProjectData(projectName, clientName, roles, location,employeeID);
+            if (numberOfRowEffected > 0)
             {
-                conn.Open();
-                SqlCommand command = new SqlCommand("INSERT INTO ProjectDetail VALUES(" +
-                           "'" + projectName + "','" + clientName + "','" + location + "','" +
-                          roles +  "'," + employeeID + ")", conn);
-                SqlDataReader rr = command.ExecuteReader();
+                MessageBox.Show("Employee Project Data Successfully Added");
             }
-            catch (Exception exception)
+            else
             {
-                MessageBox.Show(exception.Message);
-            }
-            finally
-            {
-                conn.Close();
+                MessageBox.Show("Employee Project Data Added. Please try again.");
             }
         }
 
@@ -153,8 +127,11 @@ namespace Pioneer.Consultancy
                 drC.Close();
 
                 DashboardDataGridView.DataSource = source;
+                DashboardDataGridView.BackgroundColor = Color.LightSteelBlue;
                 projectDetailDataGridView.DataSource = source1;
+                projectDetailDataGridView.BackgroundColor = Color.LightSteelBlue;
                 companyDetailDataGridView.DataSource = source2;
+                companyDetailDataGridView.BackgroundColor = Color.LightSteelBlue;
 
             }
             catch (Exception exception)
@@ -164,11 +141,17 @@ namespace Pioneer.Consultancy
             finally
             {
                 conn.Close();
+
             }
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+        }
+
+        private void companyDetailsTabPage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
