@@ -1,0 +1,10 @@
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\Pioneer.Consultancy.exe.config
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\Pioneer.Consultancy.exe
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\Pioneer.Consultancy.pdb
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.csprojResolveAssemblyReference.cache
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.Form1.resources
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.Properties.Resources.resources
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.csproj.GenerateResource.Cache
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.exe
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.pdb
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.Form2.resources
