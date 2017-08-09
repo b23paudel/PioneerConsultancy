@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PioneerTech.Consultancy.DAL;
+using Pioneertech.Consultancy.model;
 
 namespace Pioneer.Consultancy
 {
@@ -31,13 +32,17 @@ namespace Pioneer.Consultancy
 
         private void companyDetailsSaveButton_Click(object sender, EventArgs e)
         {
-            string employerName = employerNameTextBox.Text;
-            long contactNumber = Convert.ToInt64(contactNumberTextBox.Text);
-            string location = companyLocationTextBox.Text;
-            string website = companyWebsiteTextBox.Text;
-            int employeeID = Convert.ToInt32(companyEmployeeIDTextBox.Text);
+            CompanyDetail companyDetail = new CompanyDetail
+            {
+                EmployerName = employeeIdTextBox.Text,
+                ContactNumber = Convert.ToInt64(contactNumberTextBox.Text),
+                Location = companyLocationTextBox.Text,
+                Website = companyWebsiteTextBox.Text,
+                EmployeeId =Convert.ToInt32(companyEmployeeIDTextBox.Text)
+        };
+            
             EmployeeDataAccessLayer companyDAL = new EmployeeDataAccessLayer();
-            int numberOfRowEffected = companyDAL.SaveEmployeeCompanyData(employerName, contactNumber, location, website, employeeID);
+            int numberOfRowEffected = companyDAL.SaveEmployeeCompanyData(companyDetail);
             if (numberOfRowEffected > 0)
             {
                 MessageBox.Show("Employee Company Data Successfully Added");
@@ -50,19 +55,21 @@ namespace Pioneer.Consultancy
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            EmployeeDetail employeeDetail = new EmployeeDetail();
+            employeeDetail.FirstName = firstNameTextBox.Text;
+            employeeDetail.LastName = lastNameTextBox.Text;
+            employeeDetail.EmailId = emailIDTextBox.Text;
+            employeeDetail.PhoneNumber = Convert.ToInt64(phoneNumberTextBox.Text);
+            employeeDetail.AlternatePhoneNumber = Convert.ToInt64(alternatePhoneTextBox.Text);
+            employeeDetail.Address1 = address1TextBox.Text;
+            employeeDetail.Address2 = address2TextBox.Text;
+            employeeDetail.HomeCountry = homeCountryTextBox.Text;
+            employeeDetail.CurrentCountry = currentCountryTextBox.Text;
+            employeeDetail.ZipCode = Convert.ToInt32(zipcodeTextBox.Text);
 
-            string firstName = firstNameTextBox.Text;
-            string lastName = lastNameTextBox.Text;
-            string emailId = emailIDTextBox.Text;
-            long phoneNumber = Convert.ToInt64(phoneNumberTextBox.Text);
-            long alternatePhoneNumber = Convert.ToInt64(alternatePhoneTextBox.Text);
-            string address1 = address1TextBox.Text;
-            string address2 = address2TextBox.Text;
-            string homeCountry = homeCountryTextBox.Text;
-            string currentCountry = currentCountryTextBox.Text;
-            int zipCode = Convert.ToInt32(zipcodeTextBox.Text);
+            
             EmployeeDataAccessLayer employeeDAL = new EmployeeDataAccessLayer();
-            int numberOfRowEffected = employeeDAL.SaveEmployeeData(firstName, lastName, emailId, phoneNumber, alternatePhoneNumber, address1, address2, homeCountry, currentCountry, zipCode);
+            int numberOfRowEffected = employeeDAL.SaveEmployeeData(employeeDetail);
             if(numberOfRowEffected>0)
             {
                 MessageBox.Show("Employee Data Successfully Added");
@@ -76,13 +83,17 @@ namespace Pioneer.Consultancy
 
         private void projectDetailsSaveButton_Click(object sender, EventArgs e)
         {
-            string projectName = projectNameTextBox.Text;
-            string clientName = clientNameTextBox.Text;
-            string roles = rolesTextBox.Text;
-            string location = projectLocationTextBox.Text;
-            int employeeID = Convert.ToInt32(employeeIdTextBox.Text);
+            ProjectDetail projectdetails = new ProjectDetail
+            {
+                ProjectName = projectNameTextBox.Text,
+                ClientName = clientNameTextBox.Text,
+                Roles = rolesTextBox.Text,
+                Location = projectLocationTextBox.Text,
+                EmployeeId = Convert.ToInt32(employeeIdTextBox.Text)
+            };
+            
             EmployeeDataAccessLayer projectDAL = new EmployeeDataAccessLayer();
-            int numberOfRowEffected = projectDAL.SaveEmployeeProjectData(projectName, clientName, roles, location,employeeID);
+            int numberOfRowEffected = projectDAL.SaveEmployeeProjectData(projectdetails);
             if (numberOfRowEffected > 0)
             {
                 MessageBox.Show("Employee Project Data Successfully Added");
@@ -154,9 +165,6 @@ namespace Pioneer.Consultancy
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

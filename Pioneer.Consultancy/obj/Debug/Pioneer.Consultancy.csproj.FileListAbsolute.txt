@@ -10,3 +10,5 @@ C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer
 C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\obj\Debug\Pioneer.Consultancy.Form2.resources
 C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\PioneerTech.Consultancy.DAL.dll
 C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\PioneerTech.Consultancy.DAL.pdb
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\Pioneertech.Consultancy.model.dll
+C:\Users\Bibek\Documents\Visual Studio 2017\Projects\Pioneer.Consultancy\Pioneer.Consultancy\bin\Debug\Pioneertech.Consultancy.model.pdb

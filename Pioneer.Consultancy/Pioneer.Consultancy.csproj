@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PioneerTech.Consultancy.DAL">
+    <Reference Include="PioneerTech.Consultancy.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PioneerTech.Consultancy.DAL\bin\Debug\PioneerTech.Consultancy.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Pioneertech.Consultancy.model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Pioneertech.Consultancy.model\bin\Debug\Pioneertech.Consultancy.model.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
