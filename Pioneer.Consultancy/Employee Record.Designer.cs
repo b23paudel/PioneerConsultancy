@@ -214,7 +214,7 @@
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(543, 118);
+            this.lastNameTextBox.Location = new System.Drawing.Point(543, 116);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(580, 31);
             this.lastNameTextBox.TabIndex = 17;
@@ -222,7 +222,7 @@
             // lastnameLabel
             // 
             this.lastnameLabel.AutoSize = true;
-            this.lastnameLabel.Location = new System.Drawing.Point(186, 118);
+            this.lastnameLabel.Location = new System.Drawing.Point(187, 116);
             this.lastnameLabel.Name = "lastnameLabel";
             this.lastnameLabel.Size = new System.Drawing.Size(115, 25);
             this.lastnameLabel.TabIndex = 16;
@@ -230,7 +230,7 @@
             // 
             // emailIDTextBox
             // 
-            this.emailIDTextBox.Location = new System.Drawing.Point(543, 179);
+            this.emailIDTextBox.Location = new System.Drawing.Point(543, 175);
             this.emailIDTextBox.Name = "emailIDTextBox";
             this.emailIDTextBox.Size = new System.Drawing.Size(580, 31);
             this.emailIDTextBox.TabIndex = 15;
@@ -238,7 +238,7 @@
             // emailidLabel
             // 
             this.emailidLabel.AutoSize = true;
-            this.emailidLabel.Location = new System.Drawing.Point(186, 179);
+            this.emailidLabel.Location = new System.Drawing.Point(187, 175);
             this.emailidLabel.Name = "emailidLabel";
             this.emailidLabel.Size = new System.Drawing.Size(91, 25);
             this.emailidLabel.TabIndex = 14;
@@ -342,7 +342,7 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(543, 65);
+            this.firstNameTextBox.Location = new System.Drawing.Point(543, 49);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(580, 31);
             this.firstNameTextBox.TabIndex = 1;
@@ -350,7 +350,7 @@
             // firstnameLabel
             // 
             this.firstnameLabel.AutoSize = true;
-            this.firstnameLabel.Location = new System.Drawing.Point(186, 65);
+            this.firstnameLabel.Location = new System.Drawing.Point(187, 49);
             this.firstnameLabel.Name = "firstnameLabel";
             this.firstnameLabel.Size = new System.Drawing.Size(116, 25);
             this.firstnameLabel.TabIndex = 0;
