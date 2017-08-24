@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PioneerTech.Consultancy.DAL;
 using Pioneertech.Consultancy.model;
+using Pioneer.Consultancy.ServiceReference1;
 
 namespace Pioneer.Consultancy
 {
@@ -67,9 +68,9 @@ namespace Pioneer.Consultancy
             employeeDetail.CurrentCountry = currentCountryTextBox.Text;
             employeeDetail.ZipCode = Convert.ToInt32(zipcodeTextBox.Text);
 
-            
-            EmployeeDataAccessLayer employeeDAL = new EmployeeDataAccessLayer();
-            int numberOfRowEffected = employeeDAL.SaveEmployeeData(employeeDetail);
+
+            ServiceReference1.Service1Client webservice = new ServiceReference1.Service1Client();
+            int numberOfRowEffected = webservice.SaveEmployeeData(employeeDetail);
             if(numberOfRowEffected>0)
             {
                 MessageBox.Show("Employee Data Successfully Added");
@@ -78,6 +79,7 @@ namespace Pioneer.Consultancy
             {
                 MessageBox.Show("Employee Data not Added");
             }
+            
 
         }
 

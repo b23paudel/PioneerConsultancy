@@ -4,12 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneer.Consultancy", "Pioneer.Consultancy\Pioneer.Consultancy.csproj", "{B23787C3-8EEA-4DDE-9CDB-60900BFC27A4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18C71B4B-F589-424E-A226-599639F765BE} = {18C71B4B-F589-424E-A226-599639F765BE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.Consultancy.DAL", "PioneerTech.Consultancy.DAL\PioneerTech.Consultancy.DAL.csproj", "{8EBD8F5E-6BE4-482B-96B3-9F1F12D8E0BF}"
 EndProject
 Project("{E729F059-12D4-455F-A2A4-FDA8DD25E08A}") = "PioneerConsultancySetup", "PioneerConsultancySetup\PioneerConsultancySetup.isproj", "{A2C7F904-4D13-4F0A-B918-A16C0CA3966B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pioneertech.Consultancy.model", "Pioneertech.Consultancy.model\Pioneertech.Consultancy.model.csproj", "{41AB5B88-57A4-415D-A176-65516242306F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerWcfService", "PioneerWcfService\PioneerWcfService.csproj", "{18C71B4B-F589-424E-A226-599639F765BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{41AB5B88-57A4-415D-A176-65516242306F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41AB5B88-57A4-415D-A176-65516242306F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41AB5B88-57A4-415D-A176-65516242306F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C71B4B-F589-424E-A226-599639F765BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C71B4B-F589-424E-A226-599639F765BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C71B4B-F589-424E-A226-599639F765BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C71B4B-F589-424E-A226-599639F765BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
